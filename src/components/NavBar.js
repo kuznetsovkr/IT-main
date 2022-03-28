@@ -26,7 +26,7 @@ const NavBar = observer(() => {
                         src={logo}
                         width={80}
                         className="d-inline-block align-top"
-                    />{' '}
+                        />{' '}
                 </NavLink>
 
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />

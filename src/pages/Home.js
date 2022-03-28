@@ -24,7 +24,6 @@ const Home = observer(() => {
         <Benefit/>
         <Rectangle/>
         <CourseDirections/>
-        <FooterPage/>
     </div>
   );
 });

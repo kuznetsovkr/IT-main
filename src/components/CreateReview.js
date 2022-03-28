@@ -42,8 +42,7 @@ const CreateReview = ({show, onHide}) => {
             style={{backgroundColor: 'rgba(0,0,0,0.7)'}}
         >
             <Modal.Header
-                style={{backgroundColor: "#E5E5E5", height:60}}
-                closeButton>
+                style={{backgroundColor: "#E5E5E5", height:60}} closeButton>
                 <Col className="d-flex justify-content-center">
                     <Modal.Title>Оставить отзыв</Modal.Title>
                 </Col>
@@ -137,7 +136,8 @@ const CreateReview = ({show, onHide}) => {
                         </Col>
                     </Row>
                     <Col className="d-flex justify-content-center">
-                        <Button type="submit"  style={{borderRadius: 25, backgroundColor: '#4985FF'}} variant="primary">Отправить</Button>
+                        <Button type="submit"  style={{borderRadius: 25, backgroundColor: '#4985FF'}}
+                                variant="primary">Отправить</Button>
                     </Col>
                 </Form>
             </Modal.Body>

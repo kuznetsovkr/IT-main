@@ -130,7 +130,11 @@ img{
     width: 22vw;
     height: 22vw;
 }
-
+.card_with_courses{
+    border-radius: 25px;
+    border-color: gray;
+    border-width: medium;
+}
 
 /**
  * Main wrapper
@@ -141,7 +145,6 @@ img{
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
-
 /**
  * Value wrapper
  */

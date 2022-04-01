@@ -1,7 +1,5 @@
 import React from 'react'
 import letter_S from "../assets/letter-s.png"
-import {Row} from "react-bootstrap";
-import plus_add from "../assets/plus_80605.svg";
 
 const UserTable = props => {
     const handleDeleteUser = id => {
@@ -23,7 +21,6 @@ const UserTable = props => {
 
                         <td style={{fontWeight: 600, verticalAlign:"middle"}}>{user.name}</td>
                         <td  style={{verticalAlign:"middle"}}>
-                            {/* добавили обработку на клик */}
                             <button className="button muted-button" onClick={() => handleDeleteUser(user.id)}
                                     style={{backgroundColor: '#fc4e71', borderRadius:'10px',float:"right"}}>
                                 <p style={{padding:0, margin:'3px'}}>Удалить</p>

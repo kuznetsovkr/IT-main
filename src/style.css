@@ -1,8 +1,6 @@
-.text_nav{
-    color:white;
-    font-family: "Montserrat Medium";
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
 }
-
 .our_plus{
     font-family: "Montserrat Bold";
     color: black;

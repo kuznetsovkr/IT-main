@@ -8,11 +8,13 @@ import FooterPage from "./components/FooterPage";
 
 function App() {
   return(
-          <BrowserRouter>
-              <NavBar/>
-              <AppRouter/>
-
-          </BrowserRouter>
+      <div className="wrapper">
+         <BrowserRouter>
+            <NavBar/>
+            <div className="content"> <AppRouter/> </div>
+            <div className="footer"> <FooterPage/> </div>
+         </BrowserRouter>
+      </div>
 
   );
 }

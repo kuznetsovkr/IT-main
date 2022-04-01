@@ -1,13 +1,11 @@
 import {observer} from "mobx-react-lite";
-import {Button, Card, Container, Modal, Row} from "react-bootstrap";
+import {Button, Card, Col, Container, Modal, Row} from "react-bootstrap";
 import React, {useState} from "react";
 import {AddUserForm} from "../forms/AddUserForm";
 import {UserTable} from "../table/UserTable";
 import {EditUserForm} from "../forms/EditUserForm";
 import plus_add from "../assets/plus_80605.svg";
-import logo from "../assets/Logo.png";
 import {Link, useHistory} from "react-router-dom";
-import CreateCourse from "../components/CreateCourse";
 
 const Edit_Courses = observer(() =>  {
 
@@ -18,12 +16,8 @@ const Edit_Courses = observer(() =>  {
     ]
 
     const [users, setUsers] = useState(usersData)
-    // флаг editing - изначально false, функция установки флага
     const [editing, setEditing] = useState(false)
-    // начальное значение для формы редактирования
-    // так как мы не знаем, кто редактируется - пустые поля
     const initialFormState = { id: null, name: '', username: '' }
-    // значение "текущий пользователь на редактировании" + функция установки этого значения
     const [currentUser, setCurrentUser] = useState(initialFormState)
 
     const addUser = user => {
@@ -36,29 +30,26 @@ const Edit_Courses = observer(() =>  {
         setUsers(users.filter(user => user.id !== id))
     }
 
-    // обновление пользователя
     const updateUser = (id, updatedUser) => {
-        // когда мы готовы обновить пользователя, ставим флажок editing в false
         setEditing(false)
-        // и обновляем пользователя, если нашли его по id
         setUsers(users.map(user => (user.id === id ? updatedUser : user)))
     }
 
-    // редактирование пользователя
     const editRow = user => {
-        // готовы редактировать - флажок в true
         setEditing(true)
-        // устанавливаем значения полей для формы редактирования
-        // на основании выбранного "юзера"
         setCurrentUser({ id: user.id, name: user.name, username: user.username })
     }
     const [courseVisible, setCourseVisible] = useState(false)
     const history = useHistory()
 
-
     const Form_Add  = ({show, onHide}) => {
         return (
             <Modal show={show} onHide={onHide} centered style={{backgroundColor: 'rgba(0,0,0,0.7)'}}>
+                <Modal.Header style={{backgroundColor: "#E5E5E5", height:60}} closeButton>
+                    <Col className="d-flex justify-content-center">
+                        <Modal.Title><p style={{fontWeight: 600}}>Добавление курса</p></Modal.Title>
+                    </Col>
+                </Modal.Header>
                 <Modal.Body>
                     <AddUserForm addUser={addUser} />
                 </Modal.Body>

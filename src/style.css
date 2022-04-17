@@ -227,7 +227,7 @@ img{
 }
 
 .select-search__option.is-selected {
-    background: #2FCC8B;
+    background: #4985FF;
     color: #fff;
 }
 
@@ -238,7 +238,7 @@ img{
 
 .select-search__option.is-highlighted.is-selected,
 .select-search__option.is-selected:hover {
-    background: #2eb378;
+    background: #4985FF;
     color: #fff;
 }
 
@@ -280,7 +280,7 @@ img{
 }
 
 .select-search:not(.select-search--multiple) .select-search__input:hover {
-    border-color: #2FCC8B;
+    border-color: #4985FF;
 }
 
 
@@ -322,6 +322,10 @@ img{
 }
 .form-check-input.is-valid:checked, .was-validated .form-check-input:valid:checked{
     background-color: #0d6efd;
+}
+.form-control.is-valid, .was-validated .form-control:valid {
+    border-color: darkgray;
+    background-image: none;
 }
 
 @font-face {

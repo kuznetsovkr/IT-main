@@ -1,8 +1,5 @@
 import React, {useContext, useState} from 'react';
 import {Col, Dropdown, Form, Modal} from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import {Context} from "../index";
-import {AddUserForm} from "../forms/AddUserForm";
 
 const CreateCourse  = ({show, onHide}) => {
 

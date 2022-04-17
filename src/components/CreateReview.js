@@ -1,7 +1,6 @@
 import React, {useContext, useState} from 'react';
 import {Col, Dropdown, Form, Modal} from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-import {Context} from "../index";
 import Row from "react-bootstrap/Row";
 import StarRating from "./StarRating";
 import SelectSearch, {fuzzySearch} from 'react-select-search';
@@ -34,6 +33,7 @@ const CreateReview = ({show, onHide}) => {
         setValidated(true);
     };
 
+
     return (
         <Modal
             show={show}
@@ -50,7 +50,7 @@ const CreateReview = ({show, onHide}) => {
             <Modal.Body>
                 <Form noValidate validated={validated} onSubmit={handleSubmit}>
                     <SelectSearch
-
+                        required
                         options={course_array}
                         search
                         filterOptions={fuzzySearch}
@@ -63,7 +63,8 @@ const CreateReview = ({show, onHide}) => {
                     <Row>
                         <Col>
                             <Form.Control
-                                style={{borderRadius: 25, borderColor: "lightgray", backgroundImage: "none"}}
+                                required
+                                style={{borderRadius: 25, borderColor: "lightgray"}}
                                 className={"ml-1 mt-2"}
                                 placeholder={"От"}
                                 type={"date"}
@@ -73,7 +74,8 @@ const CreateReview = ({show, onHide}) => {
                         <Col className={" mt-3"}>—</Col>
                         <Col>
                             <Form.Control
-                                style={{borderRadius: 25, borderColor: "lightgray", backgroundImage: "none"}}
+                                required
+                                style={{borderRadius: 25, borderColor: "lightgray"}}
                                 className={" mt-2"}
                                 placeholder={""}
                                 type={"date"}
@@ -85,7 +87,6 @@ const CreateReview = ({show, onHide}) => {
                     <Row>
                         <Form.Group as={Col} md="4" controlId="validationCustom01">
                             <Form.Control
-                                required
                                 type="text"
                                 style={{width:470}}
                                 as="textarea" rows={3}
@@ -96,7 +97,6 @@ const CreateReview = ({show, onHide}) => {
                     <Row>
                         <Form.Group as={Col} md="4" controlId="validationCustom02">
                             <Form.Control
-                                required
                                 type="text"
                                 style={{width:470}}
                                 as="textarea" rows={3}
@@ -105,7 +105,7 @@ const CreateReview = ({show, onHide}) => {
                     </Row>
                     <Col className={"mt-3 d-flex justify-content-center"}> Комментарий</Col>
                     <Row>
-                        <Form.Group as={Col} md="4" controlId="validationCustom02">
+                        <Form.Group as={Col} md="4" controlId="validationCustom03">
                             <Form.Control
                                 required
                                 type="text"
